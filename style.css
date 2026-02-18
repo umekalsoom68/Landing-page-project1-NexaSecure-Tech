@@ -1,6 +1,103 @@
-/* Gold Top */
-.gold-border-top {
+/* Color Variables */
+:root {
+    --red: #B71C1C;
+    --dark-red: #7B0D0D;
+    --deeper: #4A0404;
+    --gold: #D4A017;
+    --gold-light: #F5C842;
+    --gold-shine: #FFE17A;
+    --cream: #FFF8E7;
+    --text-muted: rgba(255,248,231,0.7);
+  }
+  
+  /* Global Reset */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--deeper);
+    color: var(--cream);
+    overflow-x: hidden;
+  }
+  
+  /* Background Pattern */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(212,160,23,.04) 0, rgba(212,160,23,.04) 1px, transparent 0, transparent 50%),
+      repeating-linear-gradient(-45deg, rgba(212,160,23,.04) 0, rgba(212,160,23,.04) 1px, transparent 0, transparent 50%);
+    background-size: 30px 30px;
+    z-index: 0;
+  }
+  
+  /* Gold Top */
+  .gold-border-top {
     height: 4px;
     background: linear-gradient(90deg, var(--deeper), var(--gold), var(--gold-shine), var(--gold), var(--deeper));
     position: relative; z-index: 100;
   }
+  
+  /* Nav Styles */
+  nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 5vw; background: rgba(74,4,4,0.85);
+    backdrop-filter: blur(14px); position: sticky; top: 0; z-index: 99;
+  }
+  
+  .logo-wrap { display: flex; align-items: center; gap: .7rem; }
+  .logo-emblem {
+    width: 50px; height: 50px; border: 2px solid var(--gold);
+    border-radius: 50%; display: grid; place-items: center;
+  }
+  
+  .name {
+    font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 900;
+    background: linear-gradient(135deg, var(--gold-shine), var(--gold));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  
+  .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--text-muted); text-decoration: none; font-size: .85rem; }
+  
+  .nav-cart {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--deeper) !important; padding: .5rem 1.2rem; border-radius: 25px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    min-height: calc(100vh - 74px); display: flex;
+    align-items: center; justify-content: space-between;
+    padding: 3rem 5vw; position: relative; z-index: 1;
+  }
+  
+  .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 6.5vw, 5.5rem); }
+  .line2 { background: linear-gradient(135deg, var(--gold-shine), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: block; }
+  
+  /* Buttons */
+  .btn { padding: .8rem 2rem; border-radius: 4px; font-weight: 700; text-decoration: none; display: inline-block; }
+  .btn-gold { background: linear-gradient(135deg, var(--gold-shine), var(--gold)); color: var(--deeper); }
+  .btn-outline { border: 2px solid var(--gold); color: var(--gold-light); }
+  
+  /* Image Frame */
+  .arch-frame { width: 300px; height: 400px; position: relative; }
+  .arch-bg { position: absolute; inset: 0; border-radius: 50% 50% 10px 10px; background: rgba(183,28,28,0.3); border: 2px solid var(--gold); }
+  .shoe-placeholder { font-size: 8rem; position: relative; z-index: 2; animation: float 4s infinite ease-in-out; }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-12deg); }
+    50% { transform: translateY(-15px) rotate(-12deg); }
+  }
+  
+  /* Trust Strip */
+  .trust-strip { display: flex; justify-content: center; gap: 3rem; padding: 2rem; background: rgba(0,0,0,0.2); }
+  .trust-item { display: flex; align-items: center; gap: 1rem; }
+  
+  /* Stats */
+  .stats-section { display: flex; justify-content: center; gap: 4rem; padding: 4rem; }
+  .stat-card { text-align: center; border: 1px solid var(--gold); padding: 1rem 2rem; border-radius: 10px; }
+  .stat-num { font-size: 2rem; font-weight: 900; color: var(--gold-light); }
+  
+  /* Footer */
+  .footer-strip { display: flex; justify-content: space-between; padding: 1.5rem 5vw; background: #1a0000; font-size: 0.8rem; }
