@@ -1,0 +1,6 @@
+/* Gold Top */
+.gold-border-top {
+    height: 4px;
+    background: linear-gradient(90deg, var(--deeper), var(--gold), var(--gold-shine), var(--gold), var(--deeper));
+    position: relative; z-index: 100;
+  }
