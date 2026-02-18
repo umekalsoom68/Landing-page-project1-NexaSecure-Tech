@@ -54,7 +54,7 @@
   .name {
     font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 900;
     background: linear-gradient(135deg, var(--gold-shine), var(--gold));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; -webkit-text-fill-color: transparent;
   }
   
   .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
@@ -73,7 +73,7 @@
   }
   
   .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 6.5vw, 5.5rem); }
-  .line2 { background: linear-gradient(135deg, var(--gold-shine), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: block; }
+  .line2 { background: linear-gradient(135deg, var(--gold-shine), var(--gold)); background-clip: text; -webkit-text-fill-color: transparent; display: block; }
   
   /* Buttons */
   .btn { padding: .8rem 2rem; border-radius: 4px; font-weight: 700; text-decoration: none; display: inline-block; }
