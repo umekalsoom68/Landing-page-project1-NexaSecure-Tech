@@ -1,62 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Fit Ware-Pakistan's Finest Foot ware </title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Nastaliq+Urdu&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Fit Ware</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div class="gold-border-top"></div>
-    <nav>
-        <div class="logo-wrap">
-            <div class="logo-emblem">👟</div>
-            <div class="logo-text">
-                <div class="name">Home Fit Ware</div>
-                <div class="tagline">Pakistan's Finest</div>
-            </div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Collection</a></li>
-            <li><a href="#">Sale</a></li>
-            <li><a href="#" class="nav-cart">🛒 Cart (0)</a></li>
-        </ul>
-    </nav>
-    
-   <section class="hero">
-    <div class="hero-left">
-        <div class="urdu-badge">New Arrival 2024</div>
-        <h1 class="hero-title">
-            <span class="line1">Step Into</span>
-            <span class="line2">True Style</span>
-        </h1>
-        <div class="divider">
-            <div class="divider-line"></div>
-            <span class="divider-icon">✦</span>
-            <div class="divider-line right"></div>
-        </div>
-        <p class="hero-sub">
-            Pakistan ka <strong>No.1 Brand</strong>.Where comfort meets style
-        </p>
-        <div class="price-wrap">
-            <div class="price-label">Starting From</div>
-            <div class="price">Rs. 1,999 <span class="price-old">Rs. 3,500</span></div>
-        </div>
-        <div class="btn-group">
-            <a href="#" class="btn btn-outline">Explore</a>
-            <a href="#" class="btn btn-gold">Buy Now </a>
-        </div>
+
+  <!-- GOLD TOP LINE -->
+  <div class="top-line"></div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      <div class="logo-circle">
+        <img src="data:image/jpeg;base64,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" alt="Home Fit Ware"/>
+      </div>
+      <div class="logo-text">
+        <div class="name">Home Fit Ware</div>
+        <div class="sub">Pakistan's Finest</div>
+      </div>
     </div>
 
-    <div class="hero-right">
-        <div class="side-label">Premium Quality</div>
-        <div class="arch-frame">
-            <div class="arch-bg"></div>
-            <div class="shoe-placeholder">👟</div>
-        </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Collection</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#" class="btn-cart">🛒 Cart</a></li>
+    </ul>
+  </nav>
 
+  <!-- HERO SECTION -->
+  <section class="hero">
+
+    <!-- LEFT: Text Content -->
+    <div class="hero-left">
+
+      <div class="badge">✦ New Arrival 2024 ✦</div>
+
+      <h1 class="hero-title">
+        Step Into<br>
+        <span class="gold">True Style</span>
+      </h1>
+
+      <div class="divider">
+        <div class="divider-line"></div>
+        <span>✦</span>
+        <div class="divider-line r"></div>
+      </div>
+
+      <p class="hero-desc">
+        Pakistan's <strong>No.1 Footwear Brand</strong> — every step full of
+        comfort, every glance full of elegance. Premium quality, unbeatable price.
+      </p>
+
+      <div class="price-block">
+        <div class="price-label">Starting From</div>
+        <div class="price-value">
+          Rs. 1,999
+          <span class="price-old">Rs. 3,500</span>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <a href="#" class="btn btn-secondary">View Collection</a>
+        <a href="#" class="btn btn-primary">Buy Now →</a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: Shoe Image -->
+      <div class="arch">
+        <img src="/Untitled.jpg" alt="Home Fit Ware Shoe" class="shoe-img"/>
+      </div>
+      <div class="sale-bubble">
+        <span class="big">43%</span>OFF
+      </div>
+    </div>
+
+    <!-- BOTTOM LEFT: Trust Pills -->
+    <div class="trust-badges">
+      <div class="trust-pill"><span>🚚</span> Free Delivery</div>
+      <div class="trust-pill"><span>✅</span> 100% Original</div>
+      <div class="trust-pill"><span>💳</span> Cash on Delivery</div>
+      <div class="trust-pill"><span>↩️</span> 7-Day Return</div>
+    </div>
+
+    <!-- BOTTOM RIGHT: Stats -->
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">25K+</div>
+        <div class="stat-lbl">Customers</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4.9★</div>
+        <div class="stat-lbl">Rating</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">500+</div>
+        <div class="stat-lbl">Designs</div>
+      </div>
+    </div>
+
+  </section>
 
 </body>
 </html>
